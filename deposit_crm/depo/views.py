@@ -6,16 +6,16 @@ from .serializers import DepositSerializer,ArticleSerializer
 
 class DepositToList(generics.ListCreateAPIView):
     queryset = Deposit.objects.all()
-    serializers_class = DepositSerializer(queryset, many=True)
+    serializer_class = DepositSerializer
 
 class DepositDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Deposit.objects.all()
-    serializers_class = DepositSerializer(queryset, many=True)
+    serializer_class = DepositSerializer
 
 class ArticleToList(generics.ListCreateAPIView):
     queryset = Article.objects.all()
-    serializers_class = ArticleSerializer(queryset, many=True)
+    serializer_class = ArticleSerializer
 
 class ArticleDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Article.objects.all()
-    serializers_class = ArticleSerializer(queryset, many=True)
+    serializers_class = ArticleSerializer
